@@ -17,7 +17,7 @@ public class SecurityConfig {
 
 	@Bean
 	public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
-		//formatter:off
+		//@formatter:off
 		return http.csrf().disable().authorizeExchange()
 				.pathMatchers(HttpMethod.POST, "/animes/**").hasRole("ADMIN")
 				.pathMatchers(HttpMethod.PUT, "/animes/**").hasRole("ADMIN")
@@ -27,6 +27,7 @@ public class SecurityConfig {
 				.and().formLogin()
 				.and().httpBasic()
 				.and().build();
+		//@formatter:on
 	}
 	
 	@Bean
