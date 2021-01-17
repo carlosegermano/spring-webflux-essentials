@@ -1,0 +1,10 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/webflux
+    username: postgres
+    password: as2003
+logging:
+  level:
+    org:
+      springframework:
+        r2dbc: Debug
